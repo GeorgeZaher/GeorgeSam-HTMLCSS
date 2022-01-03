@@ -1,21 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Survey Form</title>
+    <style>
+        *{
+            margin: 0px;
+            font-family: cursive;
+        }
+        #title{
+            text-align: center;
+        }
+        #description{
+            text-align: center;
+        }
+        label{
+            display: block;
+            margin: 5px;
+        }
+        #name{
+            border: 3px solid blueviolet;
+            border-radius: 5px;
+            width: 250px;
+        }
+        #email{
+            border: 3px solid blueviolet;
+            border-radius: 5px;
+            width: 250px;
+
+        }
+        #number{
+            border: 3px solid blueviolet;
+            border-radius: 5px;
+            width: 250px;
+
+        }
+        #dropdown{
+            border: 3px solid blueviolet;
+            border-radius: 5px;
+            width: 250px;
+
+        }
+        
+       
+    </style>
 </head>
+
 <body>
-    <h1 id="title">This is a form</h1>
-    <p id="description"> we are going to gather details. </p>
+    <header>
+        <h1 id="title">Please fill out our Survey Form</h1>
+        <p id="description">You help us get better!</p>
+    </header>
     <form id="survey-form">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name"><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email">
-        <label for="number">Number:</label><br>
-        <input type="number" id="number" name="number">
+        <fieldset>
+            <legend>Your opinion matter!</legend>
+            <label id="name-label" for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="John Doe">
+            <label id="email-label" for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="john@example.com">
+            <label id="number-label" for="number">Age:</label>
+            <input type="number" id="number" name="number" min="18" max="50" placeholder="Your Age (optional)">
+            <label for="dropdown">Where did you hear about us?</label>
+            <select name="dropdown" id="dropdown">
+                <option value="Google">Google</option>
+                <option value="Youtube">Youtube</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Other">Other</option>
+            </select>
+            <div>
+                <p>Would you like to subscribe to our newsletter?</p>
+                <label for="Yes"><input type="radio" name="newsletter" id="Yes"> Yes</label>
+                <label for="No"><input type="radio" name="newsletter" id="No"> No</label>
+
+            </div>
+            <div>
+                <p>Choose as many of your favourite drinks:</p>
+                <label for="orange"><input type="checkbox" name="juice" id="orange"> Orange</label>
+                <label for="apple"><input type="checkbox" name="juice" id="apple"> Apple</label>
+                <label for="pineapple"><input type="checkbox" name="juice" id="pineapple"> Pineapple</label> 
+                <label for="Kiwi"><input type="checkbox" name="juice" id="Kiwi"> Kiwi</label>         
+                <label for="Mango"><input type="checkbox" name="juice" id="Mango"> Mango</label>             
+                <label for="mixed"><input type="checkbox" name="juice" id="mixed"> Mixed Fruit</label>
+            </div>
+            <div>
+                <p>Please describe your experience with one of our specialty product:</p>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Submit" id="submit">
+            </div>
+
+        </fieldset>
     </form>
 </body>
+
 </html>
